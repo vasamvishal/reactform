@@ -1,7 +1,13 @@
 import React,{Component} from 'react';
 import './dashboard.css';
+import { withRouter } from 'react-router-dom';
 import bookImg from '../dashboardComponent/content.jpeg'
+import { Link } from '@material-ui/core';
 class Dashboard extends Component {
+onSubmit=()=>{
+   this.props.history.push('/customer')
+}
+ 
     render() {
        return (
           <div className='main'>
@@ -25,7 +31,7 @@ class Dashboard extends Component {
                    <div className='bookName'>Don't Make Me Think</div>
                    <div className='authorName'>by Steve Krug</div>
                    <div className='bookName'>Rs.1500</div>
-                   <div className='buttonBuyNow'>BUY NOW</div>
+                   <div className='buttonBuyNow' onClick={this.onSubmit}>BUY NOW</div>
                 </div>
              </div>
              </div>
@@ -34,4 +40,4 @@ class Dashboard extends Component {
        );
     }
  }
- export default Dashboard;
+ export default withRouter(Dashboard);

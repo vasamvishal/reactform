@@ -4,6 +4,7 @@ import './App.css';
 import { BrowserRouter, Route, Switch, Link, NavLink } from 'react-router-dom';
 import Dashboard from './component/dashboardComponent/dashboard';
 import CustomerDetails from './component/customerDetails/customerDetails';
+import OrderPlaced from './component/orderPlaced/orderPlaced';
 
 function App() {
   return (
@@ -13,7 +14,7 @@ function App() {
             <Switch>
                 <Route path="/" component={Dashboard} exact={true} />
                  <Route path="/customer" component={CustomerDetails} /> 
-                {/* <Route path="/loading" component={Loading} /> */}
+                 <Route path="/order" component={OrderPlaced} />
             </Switch>
         </div>
     </BrowserRouter>
