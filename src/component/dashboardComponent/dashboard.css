@@ -57,9 +57,8 @@ border-radius: 2px;
     }
 
 .card{
-    width: 15%;
-    /* padding: 3px; */
-    height: 332px;
+    width: 20vh;
+    height: 30vh;
     display: flex;
     flex-direction: column;
     border: 0px solid lightgray;
@@ -81,7 +80,7 @@ border-radius: 2px;
     align-items: center;
 }
 .bookName{
-    font-size: 16px;
+    font-size: 1vw;
     padding-left: 15px;
     color: black;
     font-weight: 500;
@@ -95,13 +94,14 @@ border-radius: 2px;
 }
 .buttonBuyNow{
     width: 60%;
-    font-size: 16px;
-    height: 27px;
+    font-size: 100%;
     border-radius: 2px;
     background-color: #a03037;
     color: white;
     text-align: center;
     padding-top: 8px;
+    padding-bottom: 8px;
     margin-left: 20%;
     margin-top: 7%;
+    margin-bottom: 7%;
 }

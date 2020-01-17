@@ -24,14 +24,14 @@ onSubmit=()=>{
              <div className='lower'>
              <h3>Books</h3>
              <div>
-                <div className='card'>
-                   <div className='imageSpace'>
+                <div className='card' >
+                   {/* <div className='imageSpace' style={{height:'20vh'}}>
                    <img className='bookImg' src={bookImg} alt={"bookImg"} ></img>
                    </div>
-                   <div className='bookName'>Don't Make Me Think</div>
-                   <div className='authorName'>by Steve Krug</div>
-                   <div className='bookName'>Rs.1500</div>
-                   <div className='buttonBuyNow' onClick={this.onSubmit}>BUY NOW</div>
+                   <div className='bookName' style={{height:'2vh'}}>Don't Make Me Think!!</div>
+                   <div className='authorName'style={{height:'1vh'}}>by Steve Krug</div>
+                   <div className='bookName'style={{height:'2vh'}} >Rs.1500</div>
+                   <div className='buttonBuyNow' onClick={this.onSubmit} style={{height:'5vh'}} >BUY NOW</div> */}
                 </div>
              </div>
              </div>
