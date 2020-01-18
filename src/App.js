@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from './logo.svg';
+
 import './App.css';
 import { BrowserRouter, Route, Switch, Link, NavLink } from 'react-router-dom';
 import Dashboard from './component/dashboardComponent/dashboard';

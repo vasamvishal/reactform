@@ -5,7 +5,7 @@ const header = {
         'Content-Type': 'application/json'
     }
 }
-url="http://192.168.0.110:3000/getBookDetails"
+url="http://localhost:3000/getBookDetails"
 
 export function getAxios(url,callback) {
     console.log('header is ', baseurl.baseUrl + url);

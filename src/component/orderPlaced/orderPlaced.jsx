@@ -7,7 +7,7 @@ class OrderPlaced extends Component{
             <div className='upper'>
          <div className='dashboard'>
             <div className='logo'>
-            <img src="https://img.icons8.com/ios/64/000000/open-book.png"></img>
+            <img src="https://img.icons8.com/ios/64/000000/open-book.png" alt="Smiley face"/>
             </div>
             <div className='title'>Bookstore</div>
             <div className='search'>Search</div>
