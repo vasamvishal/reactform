@@ -6,7 +6,6 @@ import Radio from '@material-ui/core/Radio';
 import RadioGroup from '@material-ui/core/RadioGroup';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import FormControl from '@material-ui/core/FormControl';
-import FormLabel from '@material-ui/core/FormLabel';
 
 
 
@@ -14,6 +13,7 @@ import FormLabel from '@material-ui/core/FormLabel';
 class CustomerDetails extends Component {
 
     render() {
+
         return (
 
             <div className='main'>
@@ -31,60 +31,60 @@ class CustomerDetails extends Component {
                         <div className='customerDetails'>CustomerDetails</div>
                         <div className='content'>
                             <div className='name'>
-                                <TextField id="outlined-basic" label="Name" variant="outlined" style={{ width: '310px' }} />
+                                <TextField id="outlined-basic" label="Name" variant="outlined" style={{ width: '100%' }} />
                             </div>
                             <div className='phonenumber'>
-                                <TextField id="outlined-basic" label="Phone Number" variant="outlined" style={{ width: '310px' }} />
+                                <TextField id="outlined-basic" label="Phone Number" variant="outlined" style={{ width: '100%' }} />
                             </div>
                         </div>
                         <div className='content'>
                             <div className='name'>
-                                <TextField id="outlined-basic" label="Pincode" variant="outlined" style={{ width: '310px' }} />
+                                <TextField id="outlined-basic" label="Pincode" variant="outlined" style={{ width: '100%' }} />
                             </div>
                             <div className='phonenumber'>
-                                <TextField id="outlined-basic" label="Locality" variant="outlined" style={{ width: '310px' }} />
+                                <TextField id="outlined-basic" label="Locality" variant="outlined" style={{ width: '100%' }} />
                             </div>
                         </div>
                         <div className='address'>
-                            <TextField id="outlined-multiline-static" label="Address" multiline rows="3" variant="outlined" style={{ width: '632px' }} />
+                            <TextField id="outlined-multiline-static" label="Address" multiline rows="3" variant="outlined" style={{ width: '66%' }} />
                         </div>
                         <div className='content'>
                             <div className='name'>
-                                <TextField id="outlined-basic" label="city/town" variant="outlined" style={{ width: '310px' }} />
+                                <TextField id="outlined-basic" label="city/town" variant="outlined" style={{ width: '100%' }} />
                             </div>
                             <div className='phonenumber'>
-                                <TextField id="outlined-basic" label="Landmark" variant="outlined" style={{ width: '310px' }} />
+                                <TextField id="outlined-basic" label="Landmark" variant="outlined" style={{ width: '100%' }} />
                             </div>
                         </div>
 
                         <div style={{ paddingLeft: '2%', paddingBottom: '1%' }}>Type</div>
-                            <FormControl component="fieldset" style={{ paddingLeft: '2%' }}>
-                                {/* <FormLabel component="legend">labelPlacement</FormLabel> */}
-                                <RadioGroup aria-label="position" name="position" row>
-                                    <FormControlLabel
-                                        value="top"
-                                        control={<Radio color="primary" />}
-                                        label="Home"
-                                        labelPlacement="end"
-                                    />
-                                    <FormControlLabel
-                                        value="start"
-                                        control={<Radio color="primary" />}
-                                        label="Work"
-                                        labelPlacement="end"
-                                    />
-                                    <FormControlLabel
-                                        value="bottom"
-                                        control={<Radio color="primary" />}
-                                        label="Other"
-                                        labelPlacement="end"
+                        <FormControl component="fieldset" style={{ paddingLeft: '2%' }}>
+                            {/* <FormLabel component="legend">labelPlacement</FormLabel> */}
+                            <RadioGroup aria-label="position" name="position" row>
+                                <FormControlLabel
+                                    value="top"
+                                    control={<Radio color="primary" />}
+                                    label="Home"
+                                    labelPlacement="end"
+                                />
+                                <FormControlLabel
+                                    value="start"
+                                    control={<Radio color="primary" />}
+                                    label="Work"
+                                    labelPlacement="end"
+                                />
+                                <FormControlLabel
+                                    value="bottom"
+                                    control={<Radio color="primary" />}
+                                    label="Other"
+                                    labelPlacement="end"
 
-                                    />
+                                />
 
-                                </RadioGroup>
-                            </FormControl>
+                            </RadioGroup>
+                        </FormControl>
 
-                        <div className='continue' style={{ float: 'right' }}>CONTINUE</div>
+                        <div className='continue' style={{ float: 'right' }} onClick={this.Oncontinue} >CONTINUE</div>
 
 
 

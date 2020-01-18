@@ -10,7 +10,6 @@ function App() {
   return (
     <BrowserRouter>
         <div>
-
             <Switch>
                 <Route path="/" component={Dashboard} exact={true} />
                  <Route path="/customer" component={CustomerDetails} /> 
