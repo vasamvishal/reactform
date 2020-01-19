@@ -9,7 +9,7 @@ export default class AllBooks extends Component {
          console.log("keys" + JSON.stringify(item));
 
          return (
-            (i+1) % 5 == 0 ? <br /> :
+            (i+1) % 5 === 0 ? <br /> :
             <div className="div">
                <div className='card' >
                   <div className='imageSpace' >

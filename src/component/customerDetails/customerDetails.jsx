@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './customerDetails.css';
-import { makeStyles } from '@material-ui/core/styles';
+// import { makeStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
 import Radio from '@material-ui/core/Radio';
 import RadioGroup from '@material-ui/core/RadioGroup';
@@ -20,7 +20,7 @@ class CustomerDetails extends Component {
                 <div className='upper'>
                     <div className='dashboard'>
                         <div className='logo'>
-                            <img src="https://img.icons8.com/ios/64/000000/open-book.png"></img>
+                            <img src="https://img.icons8.com/ios/64/000000/open-book.png" alt="optional"/>
                         </div>
                         <div className='title'>Bookstore</div>
                         <div className='search'>Search</div>

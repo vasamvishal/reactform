@@ -1,7 +1,7 @@
 import React from 'react';
 
 import './App.css';
-import { BrowserRouter, Route, Switch, Link, NavLink } from 'react-router-dom';
+import { BrowserRouter, Route, Switch} from 'react-router-dom';
 import Dashboard from './component/dashboardComponent/dashboard';
 import CustomerDetails from './component/customerDetails/customerDetails';
 import OrderPlaced from './component/orderPlaced/orderPlaced';

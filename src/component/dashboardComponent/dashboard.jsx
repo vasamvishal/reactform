@@ -1,16 +1,22 @@
 import React, { Component } from 'react';
 import './dashboard.css';
 import { withRouter } from 'react-router-dom';
-import { Link } from '@material-ui/core';
+// import { Link } from '@material-ui/core';
 import getAllBooksService from '../../service/service'
+// import  from '../../service/service'
 import AllBooks from '../allBooks/allBooks'
-const axios = require('axios');
+// const axios = require('axios');
 
+// import SearchIcon from '@material-ui/icons/search';
+import InputBase from '@material-ui/core/InputBase';
+// import InputAdornment from "@material-ui/core/InputAdornment";
+// import IconButton from '@material-ui/core/IconButton';
 class Dashboard extends Component {
    constructor(props) {
       super(props);
       this.state = {
-         getBooks: []
+         getBooks: [],
+         displaySearchArray: []
 
       }
    }
@@ -57,27 +63,61 @@ class Dashboard extends Component {
       new getAllBooksService().getAllBooks().then(response => {
          // console.log("response friom get", response);
          var allBooks = response.data.result;
-         console.log("allBooks",allBooks);
-         this.setState({getBooks:allBooks})
+         // console.log("allBooks", allBooks);
+         this.setState({ getBooks: allBooks })
       }
 
-      )}
-   
+      )
+   }
 
+   handleSearch = (event) => {
+      if (event.target.value.length >= 1) {
+         this.setState({ searchValue: event.target.value, toggleNoteView: true });
+      } else {
+         this.setState({ toggleNoteView: false, displaySearchArray: [] });
+      }
+   }
+   handleSearchBook = (event) => {
+      let searchDataValue = this.state.searchValue
+      if (event.key === 'Enter') {
+         new getAllBooksService().searchBookByTitle(searchDataValue).then((data) => {
+            console.log(data)
+            this.setState({ getBooks: data.data.result });
+         }).catch((err) => {
+            console.log(err);
+         })
+      }
+   }
 
    render() {
 
-         return(
-         <div className = 'main' >
-               <div className='upper'>
-                  <div className='dashboard'>
-                     <div className='logo'>
-                        <img src="https://img.icons8.com/ios/64/000000/open-book.png"></img>
-                     </div>
-                     <div className='title'>Bookstore</div>
-                     <div className='search'>Search</div>
+      return (
+         <div className='main' >
+            <div className='upper'>
+               <div className='dashboard'>
+                  <div className='logo'>
+                     <img src="https://img.icons8.com/ios/64/000000/open-book.png" alt="optional" />
+                  </div>
+                  <div className='title'>Bookstore</div>
+                  <div className="search">
+                     <InputBase
+                        type="search"
+                        placeholder="Search…"
+                        onChange={this.handleSearch}
+                        onKeyDown={this.handleSearchBook}
+                        // startAdornment={(
+                        //    <InputAdornment position="start">
+                        //       <IconButton>
+                        //          <SearchIcon />
+                        //       </IconButton>
+                        //    </InputAdornment>
+
+                        // )}
+                        
+                     />
                   </div>
                </div>
+            </div>
             {/* <div className='subMain'>
                <div className='lower'>
                   <h3>Books</h3>
@@ -97,7 +137,7 @@ class Dashboard extends Component {
                   </div>
                </div>
             </div> */}
-            <AllBooks  getAllBooksData = { this.state.getBooks } />
+            <AllBooks getAllBooksData={this.state.getBooks} />
          </div>
       );
    }
