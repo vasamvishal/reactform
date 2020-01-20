@@ -7,7 +7,6 @@ import Button from '@material-ui/core/Button'
 import Radio from '@material-ui/core/Radio';
 import RadioGroup from '@material-ui/core/RadioGroup';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
-// import FormControl from '@material-ui/core/FormControl';
 import BooksService from '../service/service'
 const axios = require('axios');
 
@@ -26,33 +25,6 @@ class customerDetailsForm extends Component {
         };
 
     }
-    // componentDidMount() {
-    //     new BooksService().customerDetails.then(response => {
-    //        // console.log("response friom get", response);
-    //        var allBooks = response.data.result;
-    //        console.log("allBooks",allBooks);
-    //        this.setState({getBooks:allBooks})
-    //     }
-
-    //     )}
-
-
-    // handleNameChange=(e)=> {
-    //     // this.state.push(e.target.value)
-    //     this.setState({Name: e.target.value});
-    //  }
-    //  handlePhoneNumberChange=(e)=> {
-    //     // this.state.push(e.target.value)
-    //     this.setState({PhoneNumber: e.target.value});
-    //  }
-
-
-    //     <form onMouseLeave={() => this.handleOnHoverFilter() }>
-    // <TextField name="min" value={this.state.min} onChange={(event)=>this.handleValueChange(event)}></TextField>
-    // <TextField name="max" value={this.state.max} onChange={(event)=>this.handleValueChange(event)}></TextField>
-
-    // <Button onClick={() => this.handleOnClickFilter()}>Filter</Button>
-    // </form>
 
     handleValueChange = (event) => {
         console.log(event.target);
@@ -63,10 +35,6 @@ class customerDetailsForm extends Component {
     }
    
     handleLogin = (e) => {
-        // this.setState({PhoneNumber: e.target.value});
-        console.log("aaa", this.state)
-        console.log("Name: " + this.state.Name);
-        console.log("PhoneNumber: " + this.state.Phone_Number);
        
             const body = {
                 Name: this.state.Name,
